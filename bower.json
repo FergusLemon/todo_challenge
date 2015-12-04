@@ -1,0 +1,24 @@
+{
+  "name": "todo_challenge",
+  "homepage": "https://github.com/FergusLemon/todo_challenge",
+  "authors": [
+    "Fergus Lemon <fergus.lemon@gmail.com>"
+  ],
+  "description": "create a to do list",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8"
+  }
+}
