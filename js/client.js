@@ -1,12 +1,9 @@
-function MainController() {
-  this.items = [
-    
-  ]
+function ToDoListController() {
+  var self = this;
+
 }
-
-
 
 
 angular
   .module('ToDoList', ['ngResource'])
-  .controller('MainController', MainController);
+  .controller('ToDoListController', ToDoListController);
