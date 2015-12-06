@@ -1,6 +1,6 @@
 function ToDoListController() {
   var self = this;
-
+  self.toDoList = [];
 }
 
 

@@ -13,10 +13,16 @@
 
   <body ng-controller="ToDoListController as toDoListCtrl">
     <div>
-      <form class="form-horizontal">
-        <input type="text" name="inputbox" placeholder="What do you need to do?" size="45">
-        <button class="btn">Add item</button>
+      <form class="form-horizontal" ng-submit="toDoListCtrl.addItem()">
+        <input type="text" ng-model="toDoListCtrl.toDoText" name="inputbox" placeholder="What do you need to do?" size="45">
+        <button class="btn" type="submit">Add item</button>
       </form>
+
+      <ul class="">
+        <li ng-repeat="item in toDoListCtrl.toDoList">
+          {{item.text}}
+        </li>
+      </ul>
    </div>
   </body>
 </html>

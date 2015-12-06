@@ -2,11 +2,19 @@ describe('ToDoListController', function() {
   beforeEach(module('ToDoList'));
 
   var ctrl;
-  var items;
+  var scope;
+  var fakeList = [ {
+    "text": "Learn Javascript"
+    }, {
+    "text": "Book flights"
+  }];
 
-  beforeEach(inject(function($controller) {
-    ctrl = $controller('ToDoListController', function($scope) {});
-    items = [ { "text": "Learn Javascript" }];
+  beforeEach(inject(function($rootScope, $controller) {
+    scope = $rootScope.$new();
+    ctrl = $controller('ToDoListController', {
+      $scope: scope,
+      toDoList: fakeList
+    });
   }));
 
   xit('initializes with an empty input box and empty to do list', function() {
@@ -15,7 +23,7 @@ describe('ToDoListController', function() {
   });
 
   it("stores a user's 'to do' items in a list", function() {
-    expect(ctrl.toDoList.items).toEq(items)
+    expect(ctrl.toDoList.length).toBe(2);
   });
 
 });
