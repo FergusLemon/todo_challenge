@@ -1,11 +1,7 @@
 function ToDoListController(ToDoListItem) {
   var self = this;
 
-  self.toDoList = [{
-    "text": "Learn Javascript"
-    }, {
-    "text": "Book flights"
-  }];
+  self.toDoList = ToDoListItem.toDoList;
 
   self.addItem = function() {
     self.toDoList.push({text: self.toDoText});
