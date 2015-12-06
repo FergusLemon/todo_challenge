@@ -3,18 +3,23 @@ describe('ToDoListController', function() {
 
   var ctrl;
   var scope;
-  var fakeList = [ {
-    "text": "Learn Javascript"
-    }, {
-    "text": "Book flights"
-  }];
+  var fakeFactory = {
+    toDoList: [ {
+      "text": "Learn Javascript"
+      }, {
+      "text": "Book flights"
+    }],
+    addItem: function(item) {
+      this.toDoList.push(item)
+    }
+  };
   var toDoText;
 
   beforeEach(inject(function($rootScope, $controller) {
     scope = $rootScope.$new();
     ctrl = $controller('ToDoListController', {
       $scope: scope,
-      toDoList: fakeList
+      ToDoListItem: fakeFactory
     });
   }));
 
