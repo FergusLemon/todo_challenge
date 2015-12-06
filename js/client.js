@@ -5,6 +5,9 @@ function ToDoListController() {
     }, {
     "text": "Book flights"
   }];
+  self.addItem = function() {
+    self.toDoList.push({text: self.toDoText});
+  };
 }
 
 
