@@ -2,9 +2,8 @@ function ToDoListController(ToDoListItem) {
   var self = this;
 
   self.toDoList = ToDoListItem.toDoList;
-
   self.addItem = function() {
-    self.toDoList.push({text: self.toDoText});
+    ToDoListItem.addItem(self.toDoText);
     self.toDoText = '';
   };
 }
@@ -16,6 +15,9 @@ function ToDoListItem() {
     }, {
     "text": "Book flights"
   }];
+  factory.addItem = function(toDoText) {
+    factory.toDoList.push({ text: toDoText });
+  }
   return factory;
 }
 
