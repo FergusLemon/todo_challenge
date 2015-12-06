@@ -19,7 +19,7 @@
       </form>
 
       <ul class="">
-        <li ng-repeat="item in toDoListCtrl.toDoList">
+        <li style="list-style-type: none" ng-repeat="item in toDoListCtrl.toDoList">
           <input type="checkbox" ng-model='item.done'>
           <span> {{item.text}} </span>
         </li>
