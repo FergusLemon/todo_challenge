@@ -1,6 +1,10 @@
 function ToDoListController() {
   var self = this;
-  self.toDoList = [];
+  self.toDoList = [{
+    "text": "Learn Javascript"
+    }, {
+    "text": "Book flights"
+  }];
 }
 
 
