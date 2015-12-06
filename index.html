@@ -20,7 +20,8 @@
 
       <ul class="">
         <li ng-repeat="item in toDoListCtrl.toDoList">
-          {{item.text}}
+          <input type="checkbox" ng-model='item.done'>
+          <span> {{item.text}} </span>
         </li>
       </ul>
    </div>
