@@ -7,6 +7,7 @@ function ToDoListController() {
   }];
   self.addItem = function() {
     self.toDoList.push({text: self.toDoText});
+    self.toDoText = '';
   };
 }
 
