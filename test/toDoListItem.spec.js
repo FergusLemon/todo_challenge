@@ -17,4 +17,10 @@ describe('factory: toDoListItem', function() {
     factory.addItem(item);
     expect(factory.toDoList.length).toBe(3);
   });
+
+  it("updates an item to 'done: true' when a user marks the item as complete", function() {
+    var item = factory.toDoList[1];
+    factory.markAsComplete(item);
+    expect(item.done).toBe(true);
+  });
 });

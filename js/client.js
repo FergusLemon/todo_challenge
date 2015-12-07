@@ -11,13 +11,15 @@ function ToDoListController(ToDoListItem) {
 function ToDoListItem() {
   var factory = {};
   factory.toDoList = [{
-    "text": "Learn Javascript"
+    "text": "Learn Javascript",
+    "done": false
     }, {
-    "text": "Book flights"
+    "text": "Book flights",
+    "done": false
   }];
   factory.addItem = function(toDoText) {
-    factory.toDoList.push({ text: toDoText });
-  }
+    factory.toDoList.push({ text: toDoText, done: false});
+  };
   return factory;
 }
 
