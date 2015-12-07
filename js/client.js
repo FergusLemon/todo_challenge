@@ -6,6 +6,9 @@ function ToDoListController(ToDoListItem) {
     ToDoListItem.addItem(self.toDoText);
     self.toDoText = '';
   };
+  self.markAsComplete = function() {
+    ToDoListItem.markItemComplete(self.done);
+  };
 }
 
 function ToDoListItem() {
@@ -20,6 +23,9 @@ function ToDoListItem() {
   factory.addItem = function(toDoText) {
     factory.toDoList.push({ text: toDoText, done: false});
   };
+  factory.markAsComplete = function(item) {
+    item.done = true;
+  }
   return factory;
 }
 
