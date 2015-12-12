@@ -4,11 +4,7 @@ describe('ToDoListController', function() {
   var ctrl;
   var scope;
   var fakeFactory = {
-    toDoList: [ {
-      "text": "Learn Javascript"
-      }, {
-      "text": "Book flights"
-    }],
+    toDoList: [],
     addItem: function(item) {
       this.toDoList.push(item)
     }
@@ -29,13 +25,15 @@ describe('ToDoListController', function() {
   });
 
   it("stores a user's 'to do' items in a list", function() {
-    expect(ctrl.toDoList.length).toBe(2);
+    ctrl.toDoText = "Practice some more Angular";
+    ctrl.addItem(toDoText);
+    expect(ctrl.toDoList.length).toBe(1);
   });
 
   it("adds a new 'to do' item to the list when a user types a new item", function() {
-    ctrl.toDoText = "Practice some more Angular";
+    ctrl.toDoText = "Learn C#";
     ctrl.addItem(toDoText);
-    expect(ctrl.toDoList.length).toBe(3);
+    expect(ctrl.toDoList.length).toBe(2);
   });
 
 });

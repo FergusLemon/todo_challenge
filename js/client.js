@@ -13,13 +13,7 @@ function ToDoListController(ToDoListItem) {
 
 function ToDoListItem() {
   var factory = {};
-  factory.toDoList = [{
-    "text": "Learn Javascript",
-    "done": false
-    }, {
-    "text": "Book flights",
-    "done": false
-  }];
+  factory.toDoList = [];
   factory.addItem = function(toDoText) {
     factory.toDoList.push({ text: toDoText, done: false});
   };
